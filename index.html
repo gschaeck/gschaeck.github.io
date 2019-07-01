@@ -51,9 +51,12 @@
 	light.specular = new BABYLON.Color3(1, 1, 1);
         
         engine.runRenderLoop(function () {
-		var mesh = scene.getMeshByID("TexturedMesh.001");
-            	if(mesh != null)mesh.rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.WORLD);
-		
+		var meshes = scene.getMeshByID("TexturedMesh.001");
+            	//if(mesh != null)mesh.rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.WORLD);
+		for(var i = 0; i < meshes.length;i++)
+		{
+			meshes[i].rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.WORLD);
+		}
 		scene.render();
         });
 
