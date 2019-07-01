@@ -45,7 +45,9 @@
             "mesh.obj.obj",
             scene
         );
-
+        
+        var light = new BABYLON.PointLight("pointLight", new BABYLON.Vector3(1, 10, 1), scene);
+        
         engine.runRenderLoop(function () {
             scene.render();
         });
