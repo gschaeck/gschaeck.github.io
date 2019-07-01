@@ -53,6 +53,7 @@
         engine.runRenderLoop(function () {
 		var mesh = scene.getMeshByID("TexturedMesh.001");
             	if(mesh != null)mesh.rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.WORLD);
+		
 		scene.render();
         });
 
