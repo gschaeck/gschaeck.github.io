@@ -51,7 +51,8 @@
 	light.specular = new BABYLON.Color3(1, 1, 1);
         
         engine.runRenderLoop(function () {
-            scene.render();
+            	scene.meshes[0].rotate(BABYLON.Axis.Y, 0.01, BABYLON.Space.WORLD);
+		scene.render();
         });
 
         window.addEventListener("resize", function () {
